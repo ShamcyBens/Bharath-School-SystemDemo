@@ -1,0 +1,20 @@
+
+{% extends "test/base.html" %}
+
+{% block title %}
+  Home
+{% endblock %}
+
+{% block content %}
+<div style="background-color: #F5F5F5; padding: 50px;">
+  <h1 style="padding: 100px; background-size: cover; text-align: center; color: #555555;box-shadow: 0cqb;">Welcome to the School Management System</h1>
+  <p><a href="{% url 'add_student' %}">Add a new student</a></p>
+  <ul>
+    {% for student in students %}
+      <li>{{ student.name }} ({{ student.grade }})</li>
+    {% empty %}
+      <li>No students found.</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
+

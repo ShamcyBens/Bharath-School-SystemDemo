@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{%block title%} {% endblock%}</title>
+    
+    
+</head>
+<header>
+    <h1 style= "text-align: center; color: #0a7536 ">Welcome to BharathBrands Teaching Suit</h1>
+    <nav style =" display: flex; list-style-type: none; align-items: center; justify-content: center; ">    
+        <ul>
+            
+            <li><a href="{% url 'home' %}">Home</a></li>
+            
+        </ul>
+    </nav>
+</header>
+    <div class="content">
+        {% block content %}{% endblock %}       
+    </div>
+    <div class="footer">
+        
+        <h1>Thank you for using our site!</h1>
+    </div>
+    
+</body>
+</html>

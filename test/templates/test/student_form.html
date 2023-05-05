@@ -1,0 +1,17 @@
+{% extends "test/base.html" %}
+
+{% block content %}
+<div style="background-color: #F5F5F5; padding: 50px;">
+
+  <h1 style="text-align: center; color: blueviolet; font-size: 36px; font-weight: bold; margin-top: 50px;">Add Student</h1>
+
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Save</button>
+  </form>
+{% endblock %}
+
+
+
+
